@@ -208,7 +208,7 @@
 
 		admin_layer {
 			bindings = <
-				/* Row 1 */   B_CLR  BS(1)  BS(2)  BS(3)  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  BS(0)  K_TRN  K_TRN         K_TRN
+				/* Row 1 */   B_CLR  BS(0)  BS(1)  BS(2)  BS(3)  BS(4)  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN         K_TRN
 				/* Row 2 */   &r_sp         K_TRN  K_TRN  &r_ef  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  M_PLP  K_TRN  K_TRN  K_TRN
 				/* Row 3 */   K_CAP         K_TRN  &r_sa  K_TRN  K_TRN  K_TRN  &r_hu  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN         K_TRN
 				/* Row 4 */   K_TRN         K_TRN  K_TRN  K_TRN  &s_vo  &r_br  K_TRN  S_MUT  K_TRN  K_TRN  K_TRN                K_TRN
