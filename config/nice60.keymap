@@ -171,6 +171,14 @@
 			bindings = <&kp C_VOL_UP>, <&kp C_VOL_DN>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
+
+		frmw: firmware {
+			compatible = "zmk,behavior-mod-morph";
+			label = "FIRMWARE";
+			#binding-cells = <0>;
+			bindings = <&reset>, <&bootloader>;
+			mods = <(MOD_LSFT|MOD_RSFT)>;
+		};
 	};
 
 	keymap {
@@ -188,7 +196,7 @@
 
 		alt_default_layer {
 			bindings = <
-				/* Row 1 */   K_TRN  KF(1)  KF(2)  KF(3)  KF(4)  KF(5)  KF(6)  KF(7)  KF(8)  KF(9)  K_F10  K_F11  K_F12         K_DEL
+				/* Row 1 */   K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN         K_TRN
 				/* Row 2 */   K_TRN         K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN
 				/* Row 3 */   K_TRN         K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN         K_TRN
 				/* Row 4 */   K_TRN         K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN                K_TRN
@@ -198,7 +206,7 @@
 
 		function_layer {
 			bindings = <
-				/* Row 1 */   K_SLK  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN         K_TRN
+				/* Row 1 */   K_SLK  KF(1)  KF(2)  KF(3)  KF(4)  KF(5)  KF(6)  KF(7)  KF(8)  KF(9)  K_F10  K_F11  K_F12         K_DEL
 				/* Row 2 */   K_TRN         K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  KP(7)  KP(8)  KP(9)  K_HOM  K_END  K_TRN  K_TRN  K_INS
 				/* Row 3 */   K_TRN         K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  KP(4)  KP(5)  KP(6)  KP(0)  K_PGD  K_PGU         K_TRN
 				/* Row 4 */   K_TRN         K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  KP(1)  KP(2)  KP(3)  KP_AS  KP_SL                K_TRN
@@ -209,7 +217,7 @@
 		admin_layer {
 			bindings = <
 				/* Row 1 */   B_CLR  BS(0)  BS(1)  BS(2)  BS(3)  BS(4)  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN         K_TRN
-				/* Row 2 */   &r_sp         K_TRN  K_TRN  &r_ef  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  M_PLP  K_TRN  K_TRN  K_TRN
+				/* Row 2 */   &r_sp         K_TRN  K_TRN  &r_ef  &frmw  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  M_PLP  K_TRN  K_TRN  K_TRN
 				/* Row 3 */   K_CAP         K_TRN  &r_sa  K_TRN  K_TRN  K_TRN  &r_hu  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN         K_TRN
 				/* Row 4 */   K_TRN         K_TRN  K_TRN  K_TRN  &s_vo  &r_br  K_TRN  S_MUT  K_TRN  K_TRN  K_TRN                K_TRN
 				/* Row 5 */   K_DFL  K_TRN  K_TRN                       R_TOG                              K_TRN  K_TRN  K_TRN  K_ADF
