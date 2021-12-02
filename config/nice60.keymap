@@ -179,6 +179,14 @@
 			bindings = <&reset>, <&bootloader>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
+		
+		outp: output {
+			compatible = "zmk,behavior-mod-morph";
+			label = "OUTPUT";
+			#binding-cells = <0>;
+			bindings = <&out OUT_BLE>, <&out OUT_USB>;
+			mods = <(MOD_LSFT|MOD_RSFT)>;
+		};
 	};
 
 	keymap {
@@ -216,10 +224,10 @@
 
 		admin_layer {
 			bindings = <
-				/* Row 1 */   B_CLR  BS(0)  BS(1)  BS(2)  BS(3)  BS(4)  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN         K_TRN
-				/* Row 2 */   &r_sp         K_TRN  K_TRN  &r_ef  &frmw  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  M_PLP  K_TRN  K_TRN  K_TRN
+				/* Row 1 */   K_TRN  BS(0)  BS(1)  BS(2)  BS(3)  BS(4)  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN         K_TRN
+				/* Row 2 */   &r_sp         K_TRN  K_TRN  &r_ef  &frmw  K_TRN  K_TRN  K_TRN  K_TRN  &outp  M_PLP  K_TRN  K_TRN  K_TRN
 				/* Row 3 */   K_CAP         K_TRN  &r_sa  K_TRN  K_TRN  K_TRN  &r_hu  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN         K_TRN
-				/* Row 4 */   K_TRN         K_TRN  K_TRN  K_TRN  &s_vo  &r_br  K_TRN  S_MUT  K_TRN  K_TRN  K_TRN                K_TRN
+				/* Row 4 */   K_TRN         K_TRN  K_TRN  B_CLR  &s_vo  &r_br  K_TRN  S_MUT  K_TRN  K_TRN  K_TRN                K_TRN
 				/* Row 5 */   K_DFL  K_TRN  K_TRN                       R_TOG                              K_TRN  K_TRN  K_TRN  K_ADF
 			>;
 		};
