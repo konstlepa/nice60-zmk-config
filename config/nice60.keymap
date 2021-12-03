@@ -128,7 +128,7 @@
 			label = "RGB_HUE";
 			#binding-cells = <0>;
 			bindings = <&rgb_ug RGB_HUI>, <&rgb_ug RGB_HUD>;
-			mods = <(MOD_LSFT|MOD_RSFT)>;
+			mods = <(MOD_RCTL)>;
 		};
 
 		r_sa: rgb_saturation {
@@ -136,7 +136,7 @@
 			label = "RGB_SATURATION";
 			#binding-cells = <0>;
 			bindings = <&rgb_ug RGB_SAI>, <&rgb_ug RGB_SAD>;
-			mods = <(MOD_LSFT|MOD_RSFT)>;
+			mods = <(MOD_RCTL)>;
 		};
 
 		r_br: rgb_brightness {
@@ -144,7 +144,7 @@
 			label = "RGB_BRIGHTNESS";
 			#binding-cells = <0>;
 			bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
-			mods = <(MOD_LSFT|MOD_RSFT)>;
+			mods = <(MOD_RCTL)>;
 		};
 
 		r_sp: rgb_speed {
@@ -152,7 +152,7 @@
 			label = "RGB_SPEED";
 			#binding-cells = <0>;
 			bindings = <&rgb_ug RGB_SPI>, <&rgb_ug RGB_SPD>;
-			mods = <(MOD_LSFT|MOD_RSFT)>;
+			mods = <(MOD_RCTL)>;
 		};
 
 		r_ef: rgb_effect {
@@ -160,7 +160,7 @@
 			label = "RGB_EFFECT";
 			#binding-cells = <0>;
 			bindings = <&rgb_ug RGB_EFF>, <&rgb_ug RGB_EFR>;
-			mods = <(MOD_LSFT|MOD_RSFT)>;
+			mods = <(MOD_RCTL)>;
 		};
 
 		s_vo: snd_volume {
@@ -168,7 +168,7 @@
 			label = "SND_VOLUME";
 			#binding-cells = <0>;
 			bindings = <&kp C_VOL_UP>, <&kp C_VOL_DN>;
-			mods = <(MOD_LSFT|MOD_RSFT)>;
+			mods = <(MOD_RCTL)>;
 		};
 
 		frmw: firmware {
@@ -176,7 +176,7 @@
 			label = "FIRMWARE";
 			#binding-cells = <0>;
 			bindings = <&reset>, <&bootloader>;
-			mods = <(MOD_RCTL)>;
+			mods = <(MOD_LCTL)>;
 		};
 		
 		outp: output {
@@ -184,7 +184,7 @@
 			label = "OUTPUT";
 			#binding-cells = <0>;
 			bindings = <&out OUT_BLE>, <&out OUT_USB>;
-			mods = <(MOD_LSFT|MOD_RSFT)>;
+			mods = <(MOD_RCTL)>;
 		};
 		
 		b_cl: bt_clear {
@@ -192,7 +192,7 @@
 			label = "BLE_CLEAR";
 			#binding-cells = <0>;
 			bindings = <&none>, <&bt BT_CLR>;
-			mods = <(MOD_RCTL)>;
+			mods = <(MOD_LCTL)>;
 		};
 	};
 
@@ -234,8 +234,8 @@
 				/* Row 1 */   &b_cl  BS(0)  BS(1)  BS(2)  BS(3)  BS(4)  &none  &none  &none  &none  &none  &none  &none         &none
 				/* Row 2 */   &r_sp         &none  &none  &r_ef  &frmw  &none  &none  &none  &none  &outp  M_PLP  &none  &none  &none
 				/* Row 3 */   K_CAP         &none  &r_sa  &none  &none  &none  &r_hu  &none  &none  &none  &none  &none         &none
-				/* Row 4 */   K_TRN         &none  &none  &none  &s_vo  &r_br  &none  S_MUT  &none  &none  &none                K_TRN
-				/* Row 5 */   K_DFL  &none  &none                       R_TOG                              &none  K_TRN  &none  K_ADF
+				/* Row 4 */   &none         &none  &none  &none  &s_vo  &r_br  &none  S_MUT  &none  &none  &none                K_RCL
+				/* Row 5 */   K_DFL  &none  &none                       R_TOG                              &none  K_LCL  &none  K_ADF
 			>;
 		};
 	};
