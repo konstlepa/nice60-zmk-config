@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2021 Nick Winans
+ * Copyright (c) 2021 Konstantin Lepa
  *
  * SPDX-License-Identifier: MIT
  */
@@ -234,8 +234,8 @@
 				/* Row 1 */   &b_cl  BS(0)  BS(1)  BS(2)  BS(3)  BS(4)  &none  &none  &none  &none  &none  &none  &none         &none
 				/* Row 2 */   &r_sp         &none  &none  &r_ef  &frmw  &none  &none  &none  &none  &outp  M_PLP  &none  &none  &none
 				/* Row 3 */   K_CAP         &none  &r_sa  &none  &none  &none  &r_hu  &none  &none  &none  &none  &none         &none
-				/* Row 4 */   &none         &none  &none  &none  &s_vo  &r_br  &none  S_MUT  &none  &none  &none                &none
-				/* Row 5 */   K_DFL  &none  &none                       R_TOG                              &none  &none  &none  K_ADF
+				/* Row 4 */   K_TRN         &none  &none  &none  &s_vo  &r_br  &none  S_MUT  &none  &none  &none                K_TRN
+				/* Row 5 */   K_DFL  &none  &none                       R_TOG                              &none  K_TRN  &none  K_ADF
 			>;
 		};
 	};
