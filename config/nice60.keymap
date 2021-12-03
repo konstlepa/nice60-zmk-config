@@ -100,7 +100,6 @@
 //
 
 // Row 1
-#define B_CLR &bt BT_CLR
 #define BS(X) &bt BT_SEL X
 
 // Row 2
@@ -187,6 +186,14 @@
 			bindings = <&out OUT_BLE>, <&out OUT_USB>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
+		
+		b_cl: bt_clear {
+			compatible = "zmk,behavior-mod-morph";
+			label = "BLE_CLEAR";
+			#binding-cells = <0>;
+			bindings = <&none>, <&bt BT_CLR>;
+			mods = <(MOD_RCTL)>;
+		};
 	};
 
 	keymap {
@@ -224,11 +231,11 @@
 
 		admin_layer {
 			bindings = <
-				/* Row 1 */   K_TRN  BS(0)  BS(1)  BS(2)  BS(3)  BS(4)  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN         K_TRN
-				/* Row 2 */   &r_sp         K_TRN  K_TRN  &r_ef  &frmw  K_TRN  K_TRN  K_TRN  K_TRN  &outp  M_PLP  K_TRN  K_TRN  K_TRN
-				/* Row 3 */   K_CAP         K_TRN  &r_sa  K_TRN  K_TRN  K_TRN  &r_hu  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN         K_TRN
-				/* Row 4 */   K_TRN         K_TRN  K_TRN  B_CLR  &s_vo  &r_br  K_TRN  S_MUT  K_TRN  K_TRN  K_TRN                K_TRN
-				/* Row 5 */   K_DFL  K_TRN  K_TRN                       R_TOG                              K_TRN  K_TRN  K_TRN  K_ADF
+				/* Row 1 */   &b_cl  BS(0)  BS(1)  BS(2)  BS(3)  BS(4)  &none  &none  &none  &none  &none  &none  &none         &none
+				/* Row 2 */   &r_sp         &none  &none  &r_ef  &frmw  &none  &none  &none  &none  &outp  M_PLP  &none  &none  &none
+				/* Row 3 */   K_CAP         &none  &r_sa  &none  &none  &none  &r_hu  &none  &none  &none  &none  &none         &none
+				/* Row 4 */   &none         &none  &none  &none  &s_vo  &r_br  &none  S_MUT  &none  &none  &none                &none
+				/* Row 5 */   K_DFL  &none  &none                       R_TOG                              &none  &none  &none  K_ADF
 			>;
 		};
 	};
