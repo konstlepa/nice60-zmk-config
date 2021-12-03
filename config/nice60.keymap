@@ -176,7 +176,7 @@
 			label = "FIRMWARE";
 			#binding-cells = <0>;
 			bindings = <&reset>, <&bootloader>;
-			mods = <(MOD_LSFT|MOD_RSFT)>;
+			mods = <(MOD_RCTL)>;
 		};
 		
 		outp: output {
