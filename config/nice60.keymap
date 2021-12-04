@@ -129,6 +129,10 @@
 	quick-tap-ms = <200>;
 };
 
+&sl {
+	release-after-ms = <3000>;
+};
+
 / {
 	behaviors {
 		r_hu: rgb_hue {
