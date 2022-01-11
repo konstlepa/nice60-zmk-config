@@ -183,11 +183,19 @@
 			mods = <(MOD_RCTL)>;
 		};
 
-		frmw: firmware {
+		f_bl: firmware {
 			compatible = "zmk,behavior-mod-morph";
 			label = "FIRMWARE";
 			#binding-cells = <0>;
-			bindings = <&reset>, <&bootloader>;
+			bindings = <&none>, <&bootloader>;
+			mods = <(MOD_LCTL)>;
+		};
+		
+		f_rs: firmware {
+			compatible = "zmk,behavior-mod-morph";
+			label = "FIRMWARE";
+			#binding-cells = <0>;
+			bindings = <&none>, <&reset>;
 			mods = <(MOD_LCTL)>;
 		};
 		
@@ -244,10 +252,10 @@
 		admin_layer {
 			bindings = <
 				/* Row 1 */   &b_cl  BS(0)  BS(1)  BS(2)  BS(3)  BS(4)  &none  &none  &none  &none  &none  &none  &none         &none
-				/* Row 2 */   &r_sp         &none  &none  &r_ef  &frmw  &none  &none  &none  &none  &outp  M_PLP  &none  &none  &none
-				/* Row 3 */   K_CAP         &none  &r_sa  &none  &none  &none  &r_hu  &none  &none  &none  &none  &none         &none
-				/* Row 4 */   &none         &none  &none  &none  &s_vo  &r_br  &none  S_MUT  &none  &none  &none                K_RCL
-				/* Row 5 */   K_DFL  &none  &none                       R_TOG                              &none  K_LCL  &none  K_ADF
+				/* Row 2 */   &none         &none  &none  &none  &f_rs  &none  &none  &none  &none  &outp  M_PLP  &none  &none  &none
+				/* Row 3 */   K_CAP         &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none         &none
+				/* Row 4 */   &none         &none  &none  &none  &s_vo  &f_bl  &none  S_MUT  &none  &none  &none                K_RCL
+				/* Row 5 */   K_DFL  &none  &none                       &none                              &none  K_LCL  &none  K_ADF
 			>;
 		};
 	};
