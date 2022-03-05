@@ -135,7 +135,7 @@
 
 / {
 	behaviors {
-	        m_sl: behavior_sticky_layer {
+		m_sl: behavior_sticky_layer {
 			compatible = "zmk,behavior-sticky-key";
 			label = "STICKY_LAYER_IMPROVED";
 			#binding-cells = <1>;
@@ -144,6 +144,7 @@
 			quick-release;
 			ignore-modifiers;
 		};
+
 		r_hu: rgb_hue {
 			compatible = "zmk,behavior-mod-morph";
 			label = "RGB_HUE";
