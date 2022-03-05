@@ -50,7 +50,7 @@
 #define K_RST &kp RSHFT
 
 // Row 5
-#define K_LFN &m_sl FUNCTION_LAYER
+#define K_LFN &sl_i FUNCTION_LAYER
 #define K_LCL &kp LCTRL
 #define K_LGU &kp LGUI
 #define K_SPS &kp SPACE
@@ -113,7 +113,6 @@
 
 // Row 5
 #define K_DFL &to DEFAULT_LAYER
-#define R_TOG &rgb_ug RGB_TOG
 #define K_ADF &to ALT_DEFAULT_LAYER
 
 
@@ -129,60 +128,16 @@
 	quick-tap-ms = <200>;
 };
 
-&sl {
-	release-after-ms = <3000>;
-};
-
 / {
 	behaviors {
-		m_sl: behavior_sticky_layer {
+		sl_i: behavior_sticky_layer {
 			compatible = "zmk,behavior-sticky-key";
 			label = "STICKY_LAYER_IMPROVED";
 			#binding-cells = <1>;
-			release-after-ms = <1000>;
+			release-after-ms = <3000>;
 			bindings = <&mo>;
 			quick-release;
 			ignore-modifiers;
-		};
-
-		r_hu: rgb_hue {
-			compatible = "zmk,behavior-mod-morph";
-			label = "RGB_HUE";
-			#binding-cells = <0>;
-			bindings = <&rgb_ug RGB_HUI>, <&rgb_ug RGB_HUD>;
-			mods = <(MOD_RCTL)>;
-		};
-
-		r_sa: rgb_saturation {
-			compatible = "zmk,behavior-mod-morph";
-			label = "RGB_SATURATION";
-			#binding-cells = <0>;
-			bindings = <&rgb_ug RGB_SAI>, <&rgb_ug RGB_SAD>;
-			mods = <(MOD_RCTL)>;
-		};
-
-		r_br: rgb_brightness {
-			compatible = "zmk,behavior-mod-morph";
-			label = "RGB_BRIGHTNESS";
-			#binding-cells = <0>;
-			bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
-			mods = <(MOD_RCTL)>;
-		};
-
-		r_sp: rgb_speed {
-			compatible = "zmk,behavior-mod-morph";
-			label = "RGB_SPEED";
-			#binding-cells = <0>;
-			bindings = <&rgb_ug RGB_SPI>, <&rgb_ug RGB_SPD>;
-			mods = <(MOD_RCTL)>;
-		};
-
-		r_ef: rgb_effect {
-			compatible = "zmk,behavior-mod-morph";
-			label = "RGB_EFFECT";
-			#binding-cells = <0>;
-			bindings = <&rgb_ug RGB_EFF>, <&rgb_ug RGB_EFR>;
-			mods = <(MOD_RCTL)>;
 		};
 
 		s_vo: snd_volume {
