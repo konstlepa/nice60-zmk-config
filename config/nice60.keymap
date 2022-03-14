@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2021 Konstantin Lepa
+ * Copyright (c) 2022 Konstantin Lepa
  *
  * SPDX-License-Identifier: MIT
  */
@@ -207,9 +207,9 @@
 		function_layer {
 			bindings = <
 				/* Row 1 */   K_SLK  KF(1)  KF(2)  KF(3)  KF(4)  KF(5)  KF(6)  KF(7)  KF(8)  KF(9)  K_F10  K_F11  K_F12         K_DEL
-				/* Row 2 */   K_TRN         K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  KP(7)  KP(8)  KP(9)  K_HOM  K_END  K_TRN  K_TRN  K_INS
-				/* Row 3 */   K_TRN         K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  KP(4)  KP(5)  KP(6)  KP(0)  K_PGD  K_PGU         K_TRN
-				/* Row 4 */   K_TRN         K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  KP(1)  KP(2)  KP(3)  KP_AS  KP_SL                K_TRN
+				/* Row 2 */   K_TRN         K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  KP(0)  KP(7)  KP(8)  KP(9)  K_TRN  K_HOM  K_END  K_INS
+				/* Row 3 */   K_TRN         K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  KP(4)  KP(5)  KP(6)  K_PGD  K_PGU         K_TRN
+				/* Row 4 */   K_TRN         K_TRN  K_TRN  K_TRN  K_TRN  K_TRN  KP_AS  KP(1)  KP(2)  KP(3)  KP_SL                K_TRN
 				/* Row 5 */   K_TRN  K_TRN  K_TRN                       K_TRN                              K_TRN  K_TRN  K_TRN  K_TRN
 			>;
 		};
